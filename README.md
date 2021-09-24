@@ -20,7 +20,6 @@ Watch this [end-to-end MicroShift provisioning demo video](https://youtu.be/QOiB
 
 ## Minimum specs
 
-
 In order to run Microshift, you will need at least:
 - 2 CPU cores
 - 2GB of RAM
@@ -45,6 +44,7 @@ It may be possible to run Microshift on other systems, however they haven't been
 
 
 ## Using Microshift
+
 To give Microshift a try, simply install a recent test version (we don't provide stable releases yet) on a Fedora-derived Linux distro (we've only tested Fedora, RHEL, and CentOS Stream so far) using:
 
 ```
@@ -106,6 +106,7 @@ CONFIG_ENV_ONLY=true ./install.sh
 Microshift keeps all its state in its data-dir, which defaults to `/var/lib/microshift` when running Microshift as privileged user and `$HOME/.microshift` otherwise. Note that running Microshift unprivileged only works without node role at the moment (i.e. using `--roles=controlplane` instead of the default of `--roles=controlplane,node`).
 
 ### Kubeconfig
+
 When starting the Microshift for the first time the Kubeconfig file is created. If you need it for another user or to use externally the kubeadmin's kubeconfig is placed at `/var/lib/microshift/resources/kubeadmin/kubeconfig`.
 
 
