@@ -230,3 +230,8 @@ func TestDefaultConfigFile(t *testing.T) {
 		t.Errorf("expected config file to be empty, got %s", config.ConfigFile)
 	}
 }
+
+
+func TestNewDummyTest(t *testing.T) {
+	t.info("ran test")
+}
