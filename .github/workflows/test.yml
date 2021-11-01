@@ -12,6 +12,8 @@ jobs:
       uses: actions/setup-go@v2
       with:
         go-version: ${{ matrix.go-version }}
+    - name: install libgpgme
+      run: apt-get install -y libgpgme-dev || dnf install -y gpgme-devl
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Test
