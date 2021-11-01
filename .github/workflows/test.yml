@@ -17,7 +17,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Test
-      run: go test -mod=vendor -v -coverprofile cover.out ./pkg/...
+      run: go test -mod=vendor -v -coverprofile=cover.out -coverpkg=./... -covermode=atomic ./pkg/...
     - name: Upload Coverage
       uses: codecov/codecov-action@v2
       with:
