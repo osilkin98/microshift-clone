@@ -13,7 +13,7 @@ jobs:
       with:
         go-version: ${{ matrix.go-version }}
     - name: install libgpgme
-      run: apt-get install -y libgpgme-dev || dnf install -y gpgme-devl
+      run: sudo apt-get install -y libgpgme-dev || sudo dnf install -y gpgme-devl
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Test
