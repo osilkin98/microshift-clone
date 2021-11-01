@@ -1,0 +1,26 @@
+codecov:
+  notify:
+    require_ci_to_pass: false
+
+coverage:
+  precision: 2
+  round: down
+  range: "20...100"
+
+  status:
+    project: false
+    patch: false
+    changes: false
+
+parsers:
+  gcov:
+    branch_detection:
+      conditional: true
+      loop: true
+      method: false
+      macro: false
+
+comment:
+  layout: "reach,diff,flags,tree"
+  behavior: default
+  require_changes: false

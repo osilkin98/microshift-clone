@@ -18,3 +18,8 @@ jobs:
       uses: actions/checkout@v2
     - name: Test
       run: go test -mod=vendor -v -coverprofile cover.out ./pkg/...
+    - name: Upload Coverage
+      uses: codecov/codecov-action@v2
+      with:
+        files: ./cover.out
+        verbose: true
